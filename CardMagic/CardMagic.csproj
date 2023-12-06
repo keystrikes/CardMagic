@@ -54,7 +54,7 @@
     <ApplicationIcon>Game.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>DF1C353889740ECE8A4159FB1023F6B692F9499D</ManifestCertificateThumbprint>
@@ -142,7 +142,6 @@
     <EmbeddedResource Include="Trick2.resx">
       <DependentUpon>Trick2.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="CardMagic_1_TemporaryKey.pfx" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

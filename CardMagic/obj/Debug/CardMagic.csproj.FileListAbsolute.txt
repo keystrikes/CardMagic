@@ -1,31 +1,19 @@
-c:\users\keystrike\documents\visual studio 2015\Projects\CardMagic\CardMagic\bin\Debug\CardMagic.exe.config
-c:\users\keystrike\documents\visual studio 2015\Projects\CardMagic\CardMagic\bin\Debug\CardMagic.exe
-c:\users\keystrike\documents\visual studio 2015\Projects\CardMagic\CardMagic\bin\Debug\CardMagic.pdb
-c:\users\keystrike\documents\visual studio 2015\Projects\CardMagic\CardMagic\obj\Debug\CardMagic.Properties.Resources.resources
-c:\users\keystrike\documents\visual studio 2015\Projects\CardMagic\CardMagic\obj\Debug\CardMagic.Trick2F.resources
-c:\users\keystrike\documents\visual studio 2015\Projects\CardMagic\CardMagic\obj\Debug\CardMagic.csproj.GenerateResource.Cache
-c:\users\keystrike\documents\visual studio 2015\Projects\CardMagic\CardMagic\obj\Debug\CardMagic.exe
-c:\users\keystrike\documents\visual studio 2015\Projects\CardMagic\CardMagic\obj\Debug\CardMagic.pdb
-c:\users\keystrike\documents\visual studio 2015\Projects\CardMagic\CardMagic\obj\Debug\CardMagic.Final.resources
-C:\Users\KeyStrike\documents\visual studio 2015\Projects\CardMagic\CardMagic\obj\Debug\CardMagic.About.resources
-C:\Users\KeyStrike\documents\visual studio 2015\Projects\CardMagic\CardMagic\obj\Debug\CardMagic.Trick1.resources
-C:\Users\KeyStrike\documents\visual studio 2015\Projects\CardMagic\CardMagic\obj\Debug\CardMagic.First.resources
-C:\Users\KeyStrike\Documents\CardMagic\CardMagic\bin\Debug\CardMagic.exe.config
-C:\Users\KeyStrike\Documents\CardMagic\CardMagic\obj\Debug\CardMagic.exe
-C:\Users\KeyStrike\Documents\CardMagic\CardMagic\obj\Debug\CardMagic.pdb
-C:\Users\KeyStrike\Documents\CardMagic\CardMagic\bin\Debug\CardMagic.exe
-C:\Users\KeyStrike\Documents\CardMagic\CardMagic\bin\Debug\CardMagic.pdb
-C:\Users\KeyStrike\Documents\CardMagic\CardMagic\obj\Debug\CardMagic.csprojResolveAssemblyReference.cache
-C:\Users\KeyStrike\Documents\CardMagic\CardMagic\obj\Debug\CardMagic.About.resources
-C:\Users\KeyStrike\Documents\CardMagic\CardMagic\obj\Debug\CardMagic.Final.resources
-C:\Users\KeyStrike\Documents\CardMagic\CardMagic\obj\Debug\CardMagic.First.resources
-C:\Users\KeyStrike\Documents\CardMagic\CardMagic\obj\Debug\CardMagic.Properties.Resources.resources
-C:\Users\KeyStrike\Documents\CardMagic\CardMagic\obj\Debug\CardMagic.Trick1.resources
-C:\Users\KeyStrike\Documents\CardMagic\CardMagic\obj\Debug\CardMagic.Trick2F.resources
-C:\Users\KeyStrike\Documents\CardMagic\CardMagic\obj\Debug\CardMagic.csproj.GenerateResource.Cache
-C:\Users\KeyStrike\Documents\Visual Studio 2015\Projects\CardMagic\CardMagic\obj\Debug\CardMagic.csprojResolveAssemblyReference.cache
-C:\Users\KeyStrike\Documents\Visual Studio 2015\Projects\CardMagic\CardMagic\bin\Debug\CardMagic.exe.manifest
-C:\Users\KeyStrike\Documents\Visual Studio 2015\Projects\CardMagic\CardMagic\bin\Debug\CardMagic.application
-C:\Users\KeyStrike\Documents\Visual Studio 2015\Projects\CardMagic\CardMagic\obj\Debug\CardMagic.TrustInfo.xml
-C:\Users\KeyStrike\Documents\Visual Studio 2015\Projects\CardMagic\CardMagic\obj\Debug\CardMagic.exe.manifest
-C:\Users\KeyStrike\Documents\Visual Studio 2015\Projects\CardMagic\CardMagic\obj\Debug\CardMagic.application
+C:\Users\aksha\source\repos\keystrikes\CardMagic\CardMagic\bin\Debug\CardMagic.exe.config
+C:\Users\aksha\source\repos\keystrikes\CardMagic\CardMagic\bin\Debug\CardMagic.exe.manifest
+C:\Users\aksha\source\repos\keystrikes\CardMagic\CardMagic\bin\Debug\CardMagic.application
+C:\Users\aksha\source\repos\keystrikes\CardMagic\CardMagic\bin\Debug\CardMagic.exe
+C:\Users\aksha\source\repos\keystrikes\CardMagic\CardMagic\bin\Debug\CardMagic.pdb
+C:\Users\aksha\source\repos\keystrikes\CardMagic\CardMagic\obj\Debug\CardMagic.csproj.AssemblyReference.cache
+C:\Users\aksha\source\repos\keystrikes\CardMagic\CardMagic\obj\Debug\CardMagic.About.resources
+C:\Users\aksha\source\repos\keystrikes\CardMagic\CardMagic\obj\Debug\CardMagic.Final.resources
+C:\Users\aksha\source\repos\keystrikes\CardMagic\CardMagic\obj\Debug\CardMagic.First.resources
+C:\Users\aksha\source\repos\keystrikes\CardMagic\CardMagic\obj\Debug\CardMagic.Properties.Resources.resources
+C:\Users\aksha\source\repos\keystrikes\CardMagic\CardMagic\obj\Debug\CardMagic.Trick1.resources
+C:\Users\aksha\source\repos\keystrikes\CardMagic\CardMagic\obj\Debug\CardMagic.Trick2F.resources
+C:\Users\aksha\source\repos\keystrikes\CardMagic\CardMagic\obj\Debug\CardMagic.csproj.GenerateResource.cache
+C:\Users\aksha\source\repos\keystrikes\CardMagic\CardMagic\obj\Debug\CardMagic.csproj.CoreCompileInputs.cache
+C:\Users\aksha\source\repos\keystrikes\CardMagic\CardMagic\obj\Debug\CardMagic.TrustInfo.xml
+C:\Users\aksha\source\repos\keystrikes\CardMagic\CardMagic\obj\Debug\CardMagic.exe.manifest
+C:\Users\aksha\source\repos\keystrikes\CardMagic\CardMagic\obj\Debug\CardMagic.application
+C:\Users\aksha\source\repos\keystrikes\CardMagic\CardMagic\obj\Debug\CardMagic.exe
+C:\Users\aksha\source\repos\keystrikes\CardMagic\CardMagic\obj\Debug\CardMagic.pdb
