@@ -37,10 +37,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CardShuffler.cs" />
+    <Compile Include="ResourceProvider.cs" />
     <Compile Include="Trick1Engine.cs" />
     <Compile Include="Trick2Engine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\*.png">
+      <LogicalName>CardMagic.Logic.Resources.%(Filename)%(Extension)</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\*.jpg">
+      <LogicalName>CardMagic.Logic.Resources.%(Filename)%(Extension)</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -85,6 +85,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CardMagic.Logic\CardMagic.Logic.csproj">
+      <Project>{C1D2E3F4-A5B6-47C8-98D9-E0F1A2B3C4D5}</Project>
+      <Name>CardMagic.Logic</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="About.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,171 +161,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\5.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\6.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\7.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\8.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\9.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\10.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\11.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\12.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\13.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\14.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\15.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\16.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\17.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\18.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\19.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\20.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\21.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\22.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\23.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\24.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\25.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\26.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\27.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\28.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\30.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\31.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\32.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\33.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\34.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\35.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\36.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\37.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\38.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\39.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\40.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\41.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\42.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\43.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\44.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\45.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\46.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\47.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\48.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\49.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\50.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\51.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\52.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\53.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\4865.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\q02th.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />

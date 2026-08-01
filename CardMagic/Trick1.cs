@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Resources;
 using System.Windows.Forms;
+using CardMagic.Logic;
 
 namespace CardMagic
 {
@@ -83,15 +84,18 @@ namespace CardMagic
 
         private PictureBox SizeImage(PictureBox Pb, int i)
         {
-            //assign image from Resources
+            //assign image from Resources (prefer logic library)
 
-            ResourceManager rm = Properties.Resources.ResourceManager;
+                        Image img = ResourceProvider.GetCardImage(i);
+                        if (img == null)
+                        {
+                            ResourceManager rm = Properties.Resources.ResourceManager;
+                            img = (Bitmap)rm.GetObject(string.Format("{0}", i));
+                        }
 
-            Image img = (Bitmap)rm.GetObject(string.Format("{0}", i));
-           
-            Pb.Image = img;
-            Pb.SizeMode = PictureBoxSizeMode.StretchImage;
-            return Pb;
+                        Pb.Image = img;
+                        Pb.SizeMode = PictureBoxSizeMode.StretchImage;
+                        return Pb;
         }
 
 

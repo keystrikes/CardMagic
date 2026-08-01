@@ -20,7 +20,7 @@ CardMagic is an interactive desktop application that showcases two classic card 
   - About dialog with trick explanations
   - Card visualization with image resources
 
-- **Card Resources**: Complete deck of 52 playing cards plus joker, rendered as PNG images stored as embedded resources
+- **Card Resources**: Complete deck of 52 playing cards plus joker, embedded in the CardMagic.Logic library and consumed by the UI via the ResourceProvider class.
 
 ## Technical Details
 
@@ -62,51 +62,73 @@ The application follows a multi-form Windows Forms architecture:
 ### Project Structure
 
 ```
-CardMagic.sln                  # Solution file
+CardMagic.sln                         # Solution file
 
-CardMagic/                    # Windows Forms UI project
-├── CardMagic.csproj          # Project file
-├── Program.cs                 # Application entry point
-├── First.cs                   # Main menu form
-├── Trick1.cs                  # First magic trick (UI)
-├── Trick2.cs                  # Second magic trick (UI)
-├── Final.cs                   # Result display form
-├── About.cs                   # Information form
-├── App.config                 # Application configuration
-├── Properties/                # Assembly info and resources
-│   ├── AssemblyInfo.cs       # Version and metadata
-│   ├── Resources.resx        # Embedded resources
-│   └── Settings.settings     # Application settings
-├── Resources/                # Card images and assets
-│   ├── 1.png to 52.png      # Playing card images (Ace through King)
-│   ├── 53.png               # Joker
-│   └── *.jpg                # Background images
-└── Game.ico                  # Application icon
+CardMagic/                            # Windows Forms UI project
+├── CardMagic.csproj                  # Project file
+├── Program.cs                        # Application entry point
+├── First.cs                          # Main menu form
+├── Trick1.cs                         # First magic trick (UI)
+├── Trick1.Designer.cs                # Designer auto-generated
+├── Trick2.cs                         # Second magic trick (UI)
+├── Trick2.Designer.cs                # Designer auto-generated
+├── Final.cs                          # Result display form
+├── Final.Designer.cs                 # Designer auto-generated
+├── About.cs                          # Information form
+├── About.Designer.cs                 # Designer auto-generated
+├── App.config                        # Application configuration
+├── Properties/                       # Assembly info and resources
+│   ├── AssemblyInfo.cs               # Version and metadata
+│   ├── Resources.resx                # Embedded resources (forms)
+│   ├── Resources.Designer.cs         # Auto-generated resources
+│   ├── Settings.settings             # Application settings
+│   └── Settings.Designer.cs          # Auto-generated settings
+├── Game.ico                          # Application icon
+└── *.resx                            # Form-specific resources
 
-CardMagic.Logic/              # Class library (core logic)
-├── CardMagic.Logic.csproj    # Logic project file
-├── CardShuffler.cs           # Shuffling utilities
-├── Trick1Engine.cs           # Encapsulated logic for Trick 1
-└── Trick2Engine.cs           # Encapsulated logic for Trick 2
+CardMagic.Logic/                      # Class library (core logic & resources)
+├── CardMagic.Logic.csproj            # Logic project file
+├── CardShuffler.cs                   # Shuffling utilities
+├── Trick1Engine.cs                   # Encapsulated logic for Trick 1
+├── Trick2Engine.cs                   # Encapsulated logic for Trick 2
+├── ResourceProvider.cs               # Resource loader for embedded images
+├── Properties/
+│   └── AssemblyInfo.cs               # Version and metadata
+└── Resources/                        # Embedded card and background images
+    ├── 1.png to 53.png               # Playing cards (52 + joker)
+    ├── 4865.jpg                      # Background image
+    └── q02th.jpg                     # Background image
 ```
 
 ### Logic Layer (CardMagic.Logic)
 
-A new class library project, CardMagic.Logic, separates core trick algorithms from the UI. It contains:
+A dedicated class library project, CardMagic.Logic, separates core trick algorithms and resource management from the UI. It contains:
 
-- CardShuffler: generic shuffling utilities (used by both tricks)
-- Trick1Engine: encapsulates the 3x7 distribution, row selection, deck reorganization, and prediction logic
-- Trick2Engine: encapsulates pair creation, pair selection tracking, and pair prediction logic
+- **CardShuffler**: Generic shuffling utilities for card distribution and reorganization (used by both tricks)
+- **Trick1Engine**: Encapsulates the 3×7 distribution, row selection, deck reorganization, and prediction logic
+- **Trick2Engine**: Encapsulates pair creation, pair selection tracking, and pair prediction logic
+- **ResourceProvider**: Static class that loads embedded card images from the assembly using reflection. It supports multiple fallback strategies:
+  1. Direct loading from embedded resources using `Assembly.GetManifestResourceStream()`
+  2. Fallback to UI project's Properties.Resources if available
+  3. Fallback to file system locations during development
 
-This separation improves testability and makes the UI project responsible only for display and user interaction.
+**Embedded Resources**: All card images (1-53.png) and background images (JPGs) are embedded in CardMagic.Logic using MSBuild wildcards for automatic inclusion:
+```xml
+<EmbeddedResource Include="Resources\*.png">
+  <LogicalName>CardMagic.Logic.Resources.%(Filename)%(Extension)</LogicalName>
+</EmbeddedResource>
+```
 
-### Card Representation
+This separation improves testability, maintainability, and makes resource management centralized and decoupled from the UI layer.
 
-### Card Representation
+### Card Representation and Resources
 
-- Images 1-52: Standard playing cards (4 suits × 13 ranks)
-- Image 53: Joker card
-- All card images are 75×90 pixels for consistent UI display
+- **Card Images**: 52 standard playing cards (4 suits × 13 ranks) + 1 joker = 53 total images
+  - Images 1-52: Standard playing cards numbered by suit and rank
+  - Image 53: Joker card
+- **Dimensions**: All card images are 75×90 pixels for consistent UI display
+- **Embedding**: All imagery is embedded in CardMagic.Logic assembly at build time for distribution without external dependencies
+- **Access**: UI layer accesses resources through CardMagic.Logic.ResourceProvider.GetCardImage(index)
 
 ## How It Works
 
@@ -143,6 +165,25 @@ This separation improves testability and makes the UI project responsible only f
 4. **Navigation**: Use Back buttons to return to previous screens
 
 ## Code Highlights
+
+### Loading Card Images via ResourceProvider (Trick1.cs)
+```csharp
+private PictureBox SizeImage(PictureBox Pb, int i)
+{
+    // Loads card image from CardMagic.Logic embedded resources
+    Image img = ResourceProvider.GetCardImage(i);
+    if (img == null)
+    {
+        // Fallback to UI project's resources if available
+        ResourceManager rm = Properties.Resources.ResourceManager;
+        img = (Bitmap)rm.GetObject(string.Format("{0}", i));
+    }
+
+    Pb.Image = img;
+    Pb.SizeMode = PictureBoxSizeMode.StretchImage;
+    return Pb;
+}
+```
 
 ### Card Shuffling Algorithm (Trick1.cs)
 ```csharp
