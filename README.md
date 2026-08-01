@@ -62,12 +62,14 @@ The application follows a multi-form Windows Forms architecture:
 ### Project Structure
 
 ```
-CardMagic/
+CardMagic.sln                  # Solution file
+
+CardMagic/                    # Windows Forms UI project
 ├── CardMagic.csproj          # Project file
 ├── Program.cs                 # Application entry point
 ├── First.cs                   # Main menu form
-├── Trick1.cs                  # First magic trick
-├── Trick2.cs                  # Second magic trick
+├── Trick1.cs                  # First magic trick (UI)
+├── Trick2.cs                  # Second magic trick (UI)
 ├── Final.cs                   # Result display form
 ├── About.cs                   # Information form
 ├── App.config                 # Application configuration
@@ -80,7 +82,25 @@ CardMagic/
 │   ├── 53.png               # Joker
 │   └── *.jpg                # Background images
 └── Game.ico                  # Application icon
+
+CardMagic.Logic/              # Class library (core logic)
+├── CardMagic.Logic.csproj    # Logic project file
+├── CardShuffler.cs           # Shuffling utilities
+├── Trick1Engine.cs           # Encapsulated logic for Trick 1
+└── Trick2Engine.cs           # Encapsulated logic for Trick 2
 ```
+
+### Logic Layer (CardMagic.Logic)
+
+A new class library project, CardMagic.Logic, separates core trick algorithms from the UI. It contains:
+
+- CardShuffler: generic shuffling utilities (used by both tricks)
+- Trick1Engine: encapsulates the 3x7 distribution, row selection, deck reorganization, and prediction logic
+- Trick2Engine: encapsulates pair creation, pair selection tracking, and pair prediction logic
+
+This separation improves testability and makes the UI project responsible only for display and user interaction.
+
+### Card Representation
 
 ### Card Representation
 

@@ -7,6 +7,7 @@
 .localpilot
 
 # User-specific files
+*.csproj.user
 *.rsuser
 *.suo
 *.user
